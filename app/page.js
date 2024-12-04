@@ -4,25 +4,16 @@ import Button from "./components/button";
 import ButtonQuizz from "./components/buttonquiz";
 import Header from "./components/headers"; // Vérifiez l'import
 import Link from "next/link";
-import WebFont from "webfontloader";
-import React, { useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const WebFontLoader = dynamic(() => import("../components/WebFontLoader"), {
+  ssr: false,
+});
 
 export default function Home(text) {
-  WebFont.load({
-    google: {
-      families: ["Fjalla One"],
-    },
-  });
-
-  useEffect(() => {
-    // Code qui utilise `window`, exécuté uniquement côté client
-    console.log(window.location.href);
-  }, []);
-
-  const additionalText = "Voici un texte supplémentaire à afficher.";
-
   return (
     <div>
+      <WebFontLoader />
       <main>
         {/* Titre principal */}
         <div className="text-4xl flex items-center justify-center mt-10">
