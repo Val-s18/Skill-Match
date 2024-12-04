@@ -94,13 +94,13 @@ function QuizPage() {
       </div>
 
       <div className="text-4xl flex text-center justify-center mt-20 font-semibold">
-        <p> Découvrez les SOFT SKILLS </p>
+        <p> Discover SOFT SKILLS </p>
       </div>
 
       <div className="flex items-center justify-center gap-10 mt-20 mb-10">
         <p className="w-80 text-center text-base">
-          Explication de pourquoi on fait la liste. Lorem ipsum dolor sit amet
-          consectetur. Nunc accumsan amet ultricies diam sodales nec elementum.
+          This list will enable you to understand the definitions of each soft
+          skills. Use the quiz to practice and go further !
         </p>
       </div>
 

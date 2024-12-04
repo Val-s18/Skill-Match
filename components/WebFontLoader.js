@@ -5,7 +5,7 @@ const WebFontLoader = () => {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Fjalla One"],
+        families: ["Fjalla One", "Roboto:400,700"],
       },
     });
   }, []);

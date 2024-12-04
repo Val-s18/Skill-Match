@@ -214,7 +214,7 @@ const Question = () => {
         onClick={drawRandomCard}
         className="bg-bleu text-white flex items-center px-8 py-2 text-xl transition rounded-bl-[30px] rounded-tr-[30px] mb-20"
       >
-        Draw a Card
+        DRAW A CARD
       </button>
 
       {currentCard && (

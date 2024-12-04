@@ -31,10 +31,18 @@ export default function Home(text) {
         </div>
 
         {/* Section manifeste */}
-        <div className="flex items-center justify-center gap-10 mt-20">
+        <div className="flex flex-col items-center justify-center gap-10 mt-20">
           <p className="w-80 text-center text-base">
-            Manifeste de notre projet (conditions dans lesquelles jouer, à qui
-            ça s’adresse principalement ET comment jouer)
+            Skill Match teaches you what soft skills are by defining them, as
+            well as how and why to use them.
+          </p>
+          <p className="w-80 text-center text-base">
+            If you are a student or part of a company, you can sharpen your
+            knowledge about soft skills and get better at practicing them.
+          </p>
+          <p className="w-80 text-center text-base">
+            If you don’t know anything about soft skills, you can still play the
+            game and learn a lot !
           </p>
         </div>
         <div className="flex items-center justify-center gap-10 mt-20">
@@ -51,9 +59,8 @@ export default function Home(text) {
         <div className="flex items-center justify-center pt-20 pb-20 bg-beige ">
           <div className="flex flex-col items-center justify-center gap-8 ">
             <p className="text-center w-[365px] text-base  ">
-              Explications de comment fonctionne le mode QUIZ et quel est son
-              intérêt. Lorem ipsum dolor sit amet consectetur. Nunc accumsan
-              amet ultricies diam sodales nec elementum.{" "}
+              The Quiz mode enables you to challenge yourself and learn about
+              soft skills with question cards.
             </p>
             <ButtonQuizz text="Quiz" href="/quiz" />
           </div>
@@ -61,7 +68,7 @@ export default function Home(text) {
 
         <div className="flex flex-col items-center justify-center gap-5  pt-20 pb-20  ">
           <p className="text-center  w-[365px]  ">
-            Découvrez la liste des soft-skills et leurs définitions
+            Discover soft skills and their definitions.
           </p>
           <Button text="Soft skills" href="/skill" />
         </div>
