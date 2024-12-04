@@ -87,7 +87,7 @@ function QuizPage() {
       <div className="flex flex-col items-center justify-center gap-7 mt-16">
         <ButtonQuizz text="GO BACK" href="/" />
         <Link rel="stylesheet" href="/quiz">
-          <button className="bg-bleu text-white flex items-center px-[75px] py-2 text-xl transition rounded-bl-[30px] rounded-tr-[30px] ">
+          <button className="bg-bleu text-white flex items-center px-[70px] py-2 text-xl transition rounded-bl-[30px] rounded-tr-[30px] ">
             QUIZ
           </button>
         </Link>

@@ -23,7 +23,7 @@ export default function Home(text) {
         {/* Boutons */}
         <div className="flex flex-col items-center justify-center gap-7 mt-20">
           <Link rel="stylesheet" href="/quiz">
-            <button className="bg-orange text-white flex items-center px-[75px] py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px]">
+            <button className="bg-orange text-white flex items-center px-[68px] py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px]">
               QUIZ
             </button>
           </Link>

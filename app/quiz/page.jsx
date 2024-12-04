@@ -206,7 +206,7 @@ const Question = () => {
     <div className="flex flex-col items-center justify-center p-4 mt-10">
       <div className="flex flex-col items-center justify-center gap-7 ">
         <ButtonQuizz text="GO BACK" href="/" />
-        <Button text="SOFT SKILLS" href="/skill" className="pr-5 pl-5" />
+        <Button text="SOFT SKILLS" href="/skill" />
       </div>
 
       <h1 className="text-3xl font-bold mb-20 mt-20">Random Question Cards</h1>
