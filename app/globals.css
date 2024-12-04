@@ -7,6 +7,21 @@
   --foreground: #171717;
 } */
 
+/* globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+:root {
+  --main-font: "Fjalla One", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+* {
+  font-family: var(--main-font);
+}
+
 /* @media (prefers-color-scheme: dark) {
   /* :root {
     --background: #0a0a0a;

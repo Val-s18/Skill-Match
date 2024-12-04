@@ -2,10 +2,17 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Head from "next/head";
 import Header from "./components/headers";
+import Link from "next/link";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <body>
         <Header />
         {children}

@@ -193,11 +193,13 @@ const Question = () => {
   ];
 
   const [currentCard, setCurrentCard] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
 
-  // Fonction pour tirer une carte aléatoire
   const drawRandomCard = () => {
     const randomIndex = Math.floor(Math.random() * cards.length);
     setCurrentCard(cards[randomIndex]);
+    setShowAnswer(false);
   };
 
   return (
@@ -216,12 +218,19 @@ const Question = () => {
       </button>
 
       {currentCard && (
-        <div className="relative w-80 h-[550px] bg-white shadow-lg rounded-lg group gap-10 ">
+        <div
+          className="relative w-80 h-[550px] bg-white shadow-lg rounded-lg group gap-10 "
+          onClick={() => setShowAnswer(!showAnswer)}
+        >
           {/* Face avant : Question */}
-          <div className="absolute inset-0 mt-24 mb-24 flex flex-col items-center justify-center text-center transition-opacity duration-300 group-hover:opacity-0">
+          <div
+            className={`absolute inset-0 mt-24 mb-24 flex flex-col items-center justify-center text-center transition-opacity duration-300 ${
+              showAnswer ? "opacity-0" : "opacity-100"
+            }`}
+          >
             <div className="flex flex-col items-center gap-12 mb-12">
               <Image src="/logo.png" alt="Logo" width={100} height={100} />
-              <p className="text-lg font-medium p-5 bg-bleu  text-white ">
+              <p className="text-lg font-medium p-5 bg-bleu text-white ">
                 {currentCard.question}
               </p>
             </div>
@@ -231,8 +240,12 @@ const Question = () => {
           </div>
 
           {/* Face arrière : Titre et Définition */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <p className="text-5xl text-bleu font-bold mb-24  ">Answer</p>
+          <div
+            className={`absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 transition-opacity duration-300 ${
+              showAnswer ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <p className="text-5xl text-bleu font-bold mb-24">Answer</p>
             <div className="flex items-center justify-center">
               <h2 className="text-2xl bg-bleu text-white font-bold mb-10 w-full p-5 ">
                 {currentCard.title}

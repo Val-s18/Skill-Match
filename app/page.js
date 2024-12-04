@@ -1,10 +1,24 @@
+"use client";
 import Image from "next/image";
 import Button from "./components/button";
 import ButtonQuizz from "./components/buttonquiz";
 import Header from "./components/headers"; // Vérifiez l'import
 import Link from "next/link";
+import WebFont from "webfontloader";
+import React, { useEffect } from "react";
 
 export default function Home(text) {
+  WebFont.load({
+    google: {
+      families: ["Fjalla One"],
+    },
+  });
+
+  useEffect(() => {
+    // Code qui utilise `window`, exécuté uniquement côté client
+    console.log(window.location.href);
+  }, []);
+
   const additionalText = "Voici un texte supplémentaire à afficher.";
 
   return (
