@@ -21,7 +21,7 @@ export default function Home(text) {
         </div>
 
         {/* Boutons */}
-        <div className="flex flex-col items-center justify-center gap-7 mt-20">
+        <div className="flex flex-col items-center justify-center gap-7 mt-10">
           <Link rel="stylesheet" href="/quiz">
             <button className="bg-orange text-white flex items-center px-[68px] py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px]">
               QUIZ
@@ -31,7 +31,7 @@ export default function Home(text) {
         </div>
 
         {/* Section manifeste */}
-        <div className="flex flex-col items-center justify-center gap-10 mt-20">
+        <div className="flex flex-col items-center justify-center gap-10 mt-10">
           <p className="w-80 text-center text-base">
             Skill Match teaches you what soft skills are by defining them, as
             well as how and why to use them.
@@ -58,19 +58,21 @@ export default function Home(text) {
 
         <div className="flex items-center justify-center pt-20 pb-20 bg-beige ">
           <div className="flex flex-col items-center justify-center gap-8 ">
-            <p className="text-center w-[365px] text-base  ">
+            <p className="text-center w-[300px] text-base  ">
               The Quiz mode enables you to challenge yourself and learn about
               soft skills with question cards.
             </p>
-            <ButtonQuizz text="Quiz" href="/quiz" />
+            <button className="bg-orange text-white flex items-center px-[68px] py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px]">
+              QUIZ
+            </button>
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-5  pt-20 pb-20  ">
-          <p className="text-center  w-[365px]  ">
+          <p className="text-center  w-[300px]  ">
             Discover soft skills and their definitions.
           </p>
-          <Button text="Soft skills" href="/skill" />
+          <Button text="SOFT SKILLS" href="/skill" />
         </div>
       </main>
     </div>

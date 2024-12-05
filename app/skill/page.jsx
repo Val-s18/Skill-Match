@@ -84,6 +84,9 @@ function QuizPage() {
 
   return (
     <>
+      <div className="text-4xl flex text-center justify-center mt-20 font-semibold">
+        <h1> Discover SOFT SKILLS </h1>
+      </div>
       <div className="flex flex-col items-center justify-center gap-7 mt-16">
         <ButtonQuizz text="GO BACK" href="/" />
         <Link rel="stylesheet" href="/quiz">
@@ -91,10 +94,6 @@ function QuizPage() {
             QUIZ
           </button>
         </Link>
-      </div>
-
-      <div className="text-4xl flex text-center justify-center mt-20 font-semibold">
-        <p> Discover SOFT SKILLS </p>
       </div>
 
       <div className="flex items-center justify-center gap-10 mt-20 mb-10">
@@ -114,7 +113,9 @@ function QuizPage() {
               >
                 {skill.title}
               </h2>
-              <p className="text-gray-700 mt-2 w-[300px]">{skill.text}</p>
+              <p className="text-gray-700 text-base mt-2 w-[300px]">
+                {skill.text}
+              </p>
             </li>
           ))}
         </ul>

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "../components/button";
 import Image from "next/image";
 import ButtonQuizz from "../components/buttonquiz";
@@ -192,34 +192,45 @@ const Question = () => {
     },
   ];
 
-  const [currentCard, setCurrentCard] = useState(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [currentCard, setCurrentCard] = useState({
+    question: "Loading the question...",
+    title: "Please wait",
+    definition: "The question is loading.",
+  });
+
   const [showAnswer, setShowAnswer] = useState(false);
 
+  const [fade, setFade] = useState(false);
+
   const drawRandomCard = () => {
-    const randomIndex = Math.floor(Math.random() * cards.length);
-    setCurrentCard(cards[randomIndex]);
-    setShowAnswer(false);
+    setFade(true);
+    setTimeout(() => {
+      const randomIndex = Math.floor(Math.random() * cards.length);
+      setCurrentCard(cards[randomIndex]);
+      setShowAnswer(false);
+      setFade(false);
+    }, 800);
   };
 
+  useEffect(() => {
+    drawRandomCard();
+  }, []);
+
   return (
-    <div className="flex flex-col items-center justify-center p-4 mt-10">
-      <div className="flex flex-col items-center justify-center gap-7 ">
+    <div className="flex flex-col items-center justify-center p-4 ">
+      <h1 className="text-4xl font-bold mb-10 mt-10 text-center">
+        Random Question Cards
+      </h1>
+      <div className="flex flex-col items-center justify-center gap-7 mb-10 ">
         <ButtonQuizz text="GO BACK" href="/" />
         <Button text="SOFT SKILLS" href="/skill" />
       </div>
 
-      <h1 className="text-3xl font-bold mb-20 mt-20">Random Question Cards</h1>
-      <button
-        onClick={drawRandomCard}
-        className="bg-bleu text-white flex items-center px-8 py-2 text-xl transition rounded-bl-[30px] rounded-tr-[30px] mb-20"
-      >
-        DRAW A CARD
-      </button>
-
       {currentCard && (
         <div
-          className="relative w-80 h-[550px] bg-white shadow-lg rounded-lg group gap-10 "
+          className={`relative w-80 h-[550px] bg-white shadow-lg rounded-lg group gap-10 transition-opacity ease-in-out duration-1000 ${
+            fade ? "opacity-0" : "opacity-100"
+          }`}
           onClick={() => setShowAnswer(!showAnswer)}
         >
           {/* Face avant : Question */}
@@ -258,6 +269,12 @@ const Question = () => {
           </div>
         </div>
       )}
+      <button
+        onClick={drawRandomCard}
+        className="bg-orange text-white flex items-center px-8 py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px] mt-16 mb-16"
+      >
+        DRAW A CARD
+      </button>
     </div>
   );
 };
