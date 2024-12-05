@@ -245,7 +245,7 @@ const Question = () => {
                 {currentCard.question}
               </p>
             </div>
-            <p className="text-5xl font-bold text-bleu mt-auto mb-5">
+            <p className="text-4xl font-bold text-bleu mt-auto mb-5">
               Skill Match
             </p>
           </div>
@@ -256,7 +256,7 @@ const Question = () => {
               showAnswer ? "opacity-100" : "opacity-0"
             }`}
           >
-            <p className="text-5xl text-bleu font-bold mb-24">Answer</p>
+            <p className="text-4xl text-bleu font-bold mb-24">Answer</p>
             <div className="flex items-center justify-center">
               <h2 className="text-2xl bg-bleu text-white font-bold mb-10 w-full p-5 ">
                 {currentCard.title}

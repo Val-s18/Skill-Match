@@ -16,7 +16,7 @@ export default function Home(text) {
       <WebFontLoader />
       <main>
         {/* Titre principal */}
-        <div className="text-4xl flex items-center justify-center mt-10">
+        <div className="text-4xl font-semibold flex items-center justify-center mt-10">
           Skill-Match
         </div>
 
