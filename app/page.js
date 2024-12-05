@@ -62,9 +62,11 @@ export default function Home(text) {
               The Quiz mode enables you to challenge yourself and learn about
               soft skills with question cards.
             </p>
-            <button className="bg-orange text-white flex items-center px-[68px] py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px]">
-              QUIZ
-            </button>
+            <Link rel="stylesheet" href="/quiz">
+              <button className="bg-orange text-white flex items-center px-[68px] py-2 text-xl transition rounded-tl-[30px] rounded-br-[30px]">
+                QUIZ
+              </button>
+            </Link>
           </div>
         </div>
 
